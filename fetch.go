@@ -10,6 +10,7 @@ import (
 )
 
 func main() {
+	name := USER()
 	cpu := hardware.CPU()
 	gpu := hardware.GPU()
 	ram := hardware.RAM()
@@ -17,7 +18,7 @@ func main() {
 	distr := sys.DISTRONAME()
 	core := sys.LINUX()
 	desc := sys.DESCTOP()
-	USER()
+	fmt.Println(name)
 	fmt.Println("---------------")
 
 	fmt.Println("NAME:", distr)
@@ -33,12 +34,12 @@ func main() {
 
 }
 
-func USER() {
+func USER() string {
 	usrname := exec.Command("whoami")
 	usrnameo, err := usrname.Output()
 	if err != nil {
-		fmt.Println("user name get error")
-		panic(err)
+		return "Unknown"
 	}
-	fmt.Println(strings.TrimSpace(string(usrnameo)))
+	name := strings.TrimSpace(string(usrnameo))
+	return name
 }
