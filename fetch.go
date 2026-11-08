@@ -9,28 +9,41 @@ import (
 	sys "github.com/nonamewe/ceofetch/gets/sys"
 )
 
+type SystemInfo struct {
+	Name  string
+	CPU   string
+	GPU   string
+	RAM   string
+	Shell string
+	Distr string
+	Core  string
+	Desc  string
+}
+
 func main() {
-	name := USER()
-	cpu := hardware.CPU()
-	gpu := hardware.GPU()
-	ram := hardware.RAM()
-	shell := sys.SHELL()
-	distr := sys.DISTRONAME()
-	core := sys.LINUX()
-	desc := sys.DESCTOP()
-	fmt.Println(name)
+	info := SystemInfo{
+		Name:  USER(),
+		CPU:   hardware.CPU(),
+		GPU:   hardware.GPU(),
+		RAM:   hardware.RAM(),
+		Shell: sys.SHELL(),
+		Distr: sys.DISTRONAME(),
+		Core:  sys.LINUX(),
+		Desc:  sys.DESCTOP(),
+	}
+	fmt.Println(info.Name)
 	fmt.Println("---------------")
 
-	fmt.Println("NAME:", distr)
-	fmt.Println("CORE:", core)
-	fmt.Println("DESCTOP:", desc)
-	fmt.Println("SHELL:", shell)
+	fmt.Println("NAME:", info.Distr)
+	fmt.Println("KERNEL:", info.Core)
+	fmt.Println("DESCTOP:", info.Desc)
+	fmt.Println("SHELL:", info.Shell)
 
 	fmt.Println("---------------")
 
-	fmt.Println("CPU:", cpu)
-	fmt.Println("GPU:", gpu)
-	fmt.Println("RAM:", ram)
+	fmt.Println("CPU:", info.CPU)
+	fmt.Println("GPU:", info.GPU)
+	fmt.Println("RAM:", info.RAM)
 
 }
 
