@@ -36,6 +36,18 @@ func Image() image.Image {
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "gentoo"):
 		Distro = "gentoo"
 		Img = LoadImage("logo/gentoo.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "debian"):
+		Distro = "debian"
+		Img = LoadImage("logo/debian.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "mx"):
+		Distro = "MX"
+		Img = LoadImage("logo/MX.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "mint"):
+		Distro = "mint"
+		Img = LoadImage("logo/mint.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "cachyos"):
+		Distro = "cachyos"
+		Img = LoadImage("logo/cachyos.png")
 	default:
 		Distro = ""
 

@@ -40,10 +40,19 @@ func main() {
 	}
 	logo := logocheck.RenderImage(info.Logo, 100)
 	switch info.Distro {
+	case "MX":
+		logo = logocheck.RenderImage(info.Logo, 45)
 	case "arch":
 		logo = logocheck.RenderImage(info.Logo, 10)
+	case "debian":
+		logo = logocheck.RenderImage(info.Logo, 20)
 	case "gentoo":
 		logo = logocheck.RenderImage(info.Logo, 45)
+	case "mint":
+		logo = logocheck.RenderImage(info.Logo, 13)
+	case "cachyos":
+		logo = logocheck.RenderImage(info.Logo, 13)
+
 	}
 
 	text := []string{
