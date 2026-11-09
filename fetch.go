@@ -7,9 +7,9 @@ import (
 	"os/exec"
 	"strings"
 
-	hardware "github.com/nonamewe/ceofetch/gets/hardware"
-	sys "github.com/nonamewe/ceofetch/gets/sys"
-	logocheck "github.com/nonamewe/ceofetch/logocheck"
+	hardware "github.com/nonamewe/cerofetch/gets/hardware"
+	sys "github.com/nonamewe/cerofetch/gets/sys"
+	logocheck "github.com/nonamewe/cerofetch/logocheck"
 )
 
 type SystemInfo struct {

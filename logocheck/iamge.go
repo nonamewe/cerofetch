@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	sys "github.com/nonamewe/ceofetch/gets/sys"
+	sys "github.com/nonamewe/cerofetch/gets/sys"
 )
 
 var Distro string
