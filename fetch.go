@@ -56,6 +56,8 @@ func main() {
 		logo = logocheck.RenderImage(info.Logo, 17)
 	case "fedora":
 		logo = logocheck.RenderImage(info.Logo, 125)
+	case "zorin":
+		logo = logocheck.RenderImage(info.Logo, 22)
 
 	}
 
