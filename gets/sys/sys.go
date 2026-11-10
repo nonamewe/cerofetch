@@ -12,8 +12,8 @@ func DISTRONAME() string {
 	}
 	for _, infom := range strings.Split(string(infom), "\n") {
 		if strings.HasPrefix(infom, "NAME=") {
-			//name := strings.Trim(strings.TrimPrefix(infom, "NAME="), `"`)
-			return "zorin"
+			name := strings.Trim(strings.TrimPrefix(infom, "NAME="), `"`)
+			return name
 
 		}
 	}
