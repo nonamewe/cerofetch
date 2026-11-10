@@ -32,22 +32,28 @@ func Image() image.Image {
 	switch {
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "arch"):
 		Distro = "arch"
-		Img = LoadImage("/usr/bin/share/cerofetch/logo/arch.png")
+		Img = LoadImage("/usr/share/cerofetch/logo/arch.png")
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "gentoo"):
 		Distro = "gentoo"
-		Img = LoadImage("/usr/bin/share/cerofetch/logo/gentoo.png")
+		Img = LoadImage("/usr/share/cerofetch/logo/gentoo.png")
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "debian"):
 		Distro = "debian"
-		Img = LoadImage("/usr/bin/share/cerofetch/logo/debian.png")
+		Img = LoadImage("/usr/share/cerofetch/logo/debian.png")
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "mx"):
 		Distro = "MX"
-		Img = LoadImage("/usr/bin/share/cerofetch/logo/MX.png")
+		Img = LoadImage("/usr/share/cerofetch/logo/MX.png")
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "mint"):
 		Distro = "mint"
-		Img = LoadImage("/usr/bin/share/cerofetch/logo/mint.png")
+		Img = LoadImage("/usr/share/cerofetch/logo/mint.png")
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "cachyos"):
 		Distro = "cachyos"
-		Img = LoadImage("/usr/bin/share/cerofetch/logo/cachyos.png")
+		Img = LoadImage("/usr/share/cerofetch/logo/cachyos.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "fedora"):
+		Distro = "fedora"
+		Img = LoadImage("/usr/share/cerofetch/logo/fedora.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "pop"):
+		Distro = "popos"
+		Img = LoadImage("/usr/share/cerofetch/logo/popos.png")
 	default:
 		Distro = ""
 

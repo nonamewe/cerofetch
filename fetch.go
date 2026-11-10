@@ -52,6 +52,10 @@ func main() {
 		logo = logocheck.RenderImage(info.Logo, 13)
 	case "cachyos":
 		logo = logocheck.RenderImage(info.Logo, 13)
+	case "popos":
+		logo = logocheck.RenderImage(info.Logo, 17)
+	case "fedora":
+		logo = logocheck.RenderImage(info.Logo, 125)
 
 	}
 
