@@ -58,6 +58,16 @@ func main() {
 		logo = logocheck.RenderImage(info.Logo, 125)
 	case "zorin":
 		logo = logocheck.RenderImage(info.Logo, 22)
+	case "alpine":
+		logo = logocheck.RenderImage(info.Logo, 15)
+	case "artix":
+		logo = logocheck.RenderImage(info.Logo, 10)
+	case "nix":
+		logo = logocheck.RenderImage(info.Logo, 11)
+	case "ubuntu":
+		logo = logocheck.RenderImage(info.Logo, 12)
+	default:
+		logo = logocheck.RenderImage(info.Logo, 30)
 
 	}
 

@@ -57,9 +57,21 @@ func Image() image.Image {
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "zorin"):
 		Distro = "zorin"
 		Img = LoadImage("/usr/share/cerofetch/logo/zorin.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "alpine"):
+		Distro = "alpine"
+		Img = LoadImage("/usr/share/cerofetch/logo/alpine.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "artix"):
+		Distro = "artix"
+		Img = LoadImage("/usr/share/cerofetch/logo/artix.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "nix"):
+		Distro = "nix"
+		Img = LoadImage("/usr/share/cerofetch/logo/nix.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "ubuntu"):
+		Distro = "ubuntu"
+		Img = LoadImage("/usr/share/cerofetch/logo/ubuntu.png")
 	default:
 		Distro = ""
-
+		Img = LoadImage("/usr/share/cerofetch/logo/unknown.png")
 	}
 	return Img
 }
