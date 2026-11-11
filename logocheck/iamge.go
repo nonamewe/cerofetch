@@ -69,6 +69,9 @@ func Image() image.Image {
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "ubuntu"):
 		Distro = "ubuntu"
 		Img = LoadImage("/usr/share/cerofetch/logo/ubuntu.png")
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "void"):
+		Distro = "void"
+		Img = LoadImage("/usr/share/cerofetch/logo/void.png")
 	default:
 		Distro = ""
 		Img = LoadImage("/usr/share/cerofetch/logo/unknown.png")

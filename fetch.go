@@ -66,6 +66,8 @@ func main() {
 		logo = logocheck.RenderImage(info.Logo, 11)
 	case "ubuntu":
 		logo = logocheck.RenderImage(info.Logo, 12)
+	case "void":
+		logo = logocheck.RenderImage(info.Logo, 5)
 	default:
 		logo = logocheck.RenderImage(info.Logo, 30)
 
