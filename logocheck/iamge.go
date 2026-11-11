@@ -45,7 +45,7 @@ func Image() image.Image {
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "mint"):
 		Distro = "mint"
 		Img = LoadImage("/usr/share/cerofetch/logo/mint.png")
-	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "cachyos"):
+	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "cachy"):
 		Distro = "cachyos"
 		Img = LoadImage("/usr/share/cerofetch/logo/cachyos.png")
 	case strings.Contains(strings.ToLower(sys.DISTRONAME()), "fedora"):
