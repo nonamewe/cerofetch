@@ -9,4 +9,4 @@
 
 | Debian | Linux Mint | NixOS |
 |:---:|:---:|:---:|
-| ![Debian](https://raw.githubusercontent.com/nonamewe/nonamewe/main/ceroprev/debian.jpg) | ![Mint](https://raw.githubusercontent.com/nonamewe/nonamewe/main/ceroprev/mint.jpg)) | ![NixOS](https://raw.githubusercontent.com/nonamewe/nonamewe/main/ceroprev/nix.jpg) |
+| ![Debian](https://raw.githubusercontent.com/nonamewe/nonamewe/main/ceroprev/debian.jpg) | ![Mint](https://raw.githubusercontent.com/nonamewe/nonamewe/main/ceroprev/mint.jpg) | ![NixOS](https://raw.githubusercontent.com/nonamewe/nonamewe/main/ceroprev/nix.jpg) |
