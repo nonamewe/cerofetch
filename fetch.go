@@ -68,8 +68,10 @@ func main() {
 		logo = logocheck.RenderImage(info.Logo, 12)
 	case "void":
 		logo = logocheck.RenderImage(info.Logo, 5)
+	case "devuan":
+		logo = logocheck.RenderImage(info.Logo, 17)
 	default:
-		logo = logocheck.RenderImage(info.Logo, 30)
+		logo = logocheck.RenderImage(info.Logo, 15)
 
 	}
 
