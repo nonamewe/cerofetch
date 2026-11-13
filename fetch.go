@@ -14,6 +14,7 @@ import (
 
 type SystemInfo struct {
 	Locale string
+	Disk   string
 	Upt    string
 	Distro string
 	Logo   image.Image
@@ -29,6 +30,7 @@ type SystemInfo struct {
 
 func main() {
 	info := SystemInfo{
+		Disk:   hardware.Disk(),
 		Distro: logocheck.Distro,
 		Locale: sys.Locale(),
 		Logo:   logocheck.Image(),
@@ -92,6 +94,7 @@ func main() {
 		"CPU: " + info.CPU,
 		"GPU: " + info.GPU,
 		"RAM: " + info.RAM,
+		"DISK: " + info.Disk,
 	}
 	maxLines := len(logo)
 	if len(text) > maxLines {
