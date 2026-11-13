@@ -13,6 +13,8 @@ import (
 )
 
 type SystemInfo struct {
+	Locale string
+	Upt    string
 	Distro string
 	Logo   image.Image
 	Name   string
@@ -28,7 +30,9 @@ type SystemInfo struct {
 func main() {
 	info := SystemInfo{
 		Distro: logocheck.Distro,
+		Locale: sys.Locale(),
 		Logo:   logocheck.Image(),
+		Upt:    sys.Uptime(),
 		Name:   USER(),
 		CPU:    hardware.CPU(),
 		GPU:    hardware.GPU(),
@@ -80,7 +84,9 @@ func main() {
 		"---------------",
 		"NAME: " + info.Distr,
 		"KERNEL: " + info.Core,
+		"UPTIME: " + info.Upt,
 		"DESKTOP: " + info.Desc,
+		"LOCALE: " + info.Locale,
 		"SHELL: " + info.Shell,
 		"---------------",
 		"CPU: " + info.CPU,
