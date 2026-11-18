@@ -13,36 +13,38 @@ import (
 )
 
 type SystemInfo struct {
-	Locale string
-	Disk   string
-	Upt    string
-	Distro string
-	Logo   image.Image
-	Name   string
-	CPU    string
-	GPU    string
-	RAM    string
-	Shell  string
-	Distr  string
-	Core   string
-	Desc   string
+	Packages string
+	Locale   string
+	Disk     string
+	Upt      string
+	Distro   string
+	Logo     image.Image
+	Name     string
+	CPU      string
+	GPU      string
+	RAM      string
+	Shell    string
+	Distr    string
+	Core     string
+	Desc     string
 }
 
 func main() {
 	info := SystemInfo{
-		Disk:   hardware.Disk(),
-		Distro: logocheck.Distro,
-		Locale: sys.Locale(),
-		Logo:   logocheck.Image(),
-		Upt:    sys.Uptime(),
-		Name:   USER(),
-		CPU:    hardware.CPU(),
-		GPU:    hardware.GPU(),
-		RAM:    hardware.RAM(),
-		Shell:  sys.SHELL(),
-		Distr:  sys.DISTRONAME(),
-		Core:   sys.LINUX(),
-		Desc:   sys.DESCTOP(),
+		Packages: sys.Package(),
+		Disk:     hardware.Disk(),
+		Distro:   logocheck.Distro,
+		Locale:   sys.Locale(),
+		Logo:     logocheck.Image(),
+		Upt:      sys.Uptime(),
+		Name:     USER(),
+		CPU:      hardware.CPU(),
+		GPU:      hardware.GPU(),
+		RAM:      hardware.RAM(),
+		Shell:    sys.SHELL(),
+		Distr:    sys.DISTRONAME(),
+		Core:     sys.LINUX(),
+		Desc:     sys.DESCTOP(),
 	}
 	logo := logocheck.RenderImage(info.Logo, 100)
 	switch info.Distro {
@@ -84,9 +86,10 @@ func main() {
 	text := []string{
 		info.Name,
 		"---------------",
-		"NAME: " + info.Distr,
+		"OS: " + info.Distr,
 		"KERNEL: " + info.Core,
 		"UPTIME: " + info.Upt,
+		"PACKAGES: " + info.Packages,
 		"DESKTOP: " + info.Desc,
 		"LOCALE: " + info.Locale,
 		"SHELL: " + info.Shell,
