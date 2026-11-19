@@ -27,6 +27,14 @@ func Package() string {
 		count := strings.Count(string(out), "\n")
 		return fmt.Sprintf("%d", count)
 
+	case strings.Contains(strings.ToLower(distro), "debian"):
+		comm := exec.Command("dpkg", "-l")
+		out, err := comm.Output()
+		if err != nil {
+			return "Unknown"
+		}
+		count := strings.Count(string(out), "\n")
+		return fmt.Sprintf("%d", count)
 	}
 
 	return "Unknown"
