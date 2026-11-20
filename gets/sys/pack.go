@@ -16,7 +16,7 @@ func Package() string {
 			return "Unknown"
 		}
 		count := strings.Count(string(out), "\n")
-		return string(count)
+		return fmt.Sprintf("%d", count)
 
 	case strings.Contains(strings.ToLower(distro), "void"):
 		comm := exec.Command("xbps-query", "-l")
